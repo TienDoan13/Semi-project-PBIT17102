@@ -57,6 +57,7 @@ session_start();
     }
   </style>
 </head>
+<h1>Tien Loc</h1>
 <body style="background-image: url('https://wallpaper.dog/large/20487011.jpg'); background-attachment: fixed;">
 <nav class="navbar navbar-expand-sm navbar-dark bg-transparent">
   <div class="container-fluid">
@@ -153,6 +154,7 @@ session_start();
     </div>
   </div>
   <h1>Quang da sua</h1>
+  <h1>Quang da sua lan 2</h1>
 </div>
 </body>
 </html>
