@@ -1,7 +1,4 @@
-﻿hp
-session_start(); 
-?>
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Musicearth</title>
