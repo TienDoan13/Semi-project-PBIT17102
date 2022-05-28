@@ -1,4 +1,4 @@
-<?php
+﻿hp
 session_start(); 
 ?>
 <!DOCTYPE html>
@@ -108,7 +108,7 @@ session_start();
 		<p style="text-align: left; font-family: arial; color: white; font-size: 30px; margin-left: 26px;">All Songs</p>
 			<div>
 				<?php
-				$connect = mysqli_connect('localhost','root','','tunesourcewebsite');
+				$connect = mysqli_connect('3.132.234.157','root','123@123a','tunesourcewebsite');
 				if($connect){
 					echo "";
 				}
