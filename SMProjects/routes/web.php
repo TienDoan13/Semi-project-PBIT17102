@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Blueprint;
 use Illuminate\Support\Facades\Scheme;
+use App\Http\Controllers\BackendController;
 use App\Http\Controllers\BCategoryController;
 use App\Http\Controllers\BMovieController;
 
@@ -22,8 +23,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('product', function () {
-    return view('admin.page.listMovie');
+Route::group(['prefix'=>'index'], function(){
+    Route::get('/',[BackendController::class,'index'])->name('admin.all.index');
 });
 
 Route::group(['prefix'=>'category'], function(){
