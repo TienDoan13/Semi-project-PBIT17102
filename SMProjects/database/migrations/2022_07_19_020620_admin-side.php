@@ -21,7 +21,7 @@ class AdminSide extends Migration
 
         Schema::create('movie', function($table){
             $table->increments('movie_id');
-            $table->string('movie_name',200);
+            $table->varchar('movie_name',200);
             $table->string('description',3000);
             $table->string('director',200);
             $table->string('main_actor',200);
@@ -31,7 +31,7 @@ class AdminSide extends Migration
         Schmea::create('user', function($table){
             $table->increments('user_id');
             $table->string('username',200);
-            $table->string('password',200);
+            $table->string('password',);
         });
     }
 
