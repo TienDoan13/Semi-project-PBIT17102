@@ -12,7 +12,7 @@
         <div class="col-xs-12 col-md-5 col-lg-5">
             <div class="panel panel-primary">
                 <div class="panel-body">
-                    <form action="{{ route('admin.movie.add') }}" method="POST" role="form">
+                    <form action="{{ route('admin.movie.add') }}" method="POST" role="form" enctype="multipart/form-data">
                         @csrf
                         <fieldset>
                             <div>                              
@@ -39,6 +39,9 @@
                                 <label>Description:</label>
                                 <textarea class="form-control" name="movie_description"
                                 style="width: 140%" placeholder="Movie Descrption"></textarea>
+                                <br>
+                                <label>Image:</label>
+                                <input type="file" class="form-control" name="movie_img">
                                 <br>
                             </div>
                         </fieldset>

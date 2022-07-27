@@ -27,12 +27,7 @@ class AdminSide extends Migration
             $table->string('main_actor',200);
             $table->string('movie_img',2000);
         });
-
-        Schmea::create('user', function($table){
-            $table->increments('user_id');
-            $table->string('username',200);
-            $table->string('password',);
-        });
+        
     }
 
     /**
