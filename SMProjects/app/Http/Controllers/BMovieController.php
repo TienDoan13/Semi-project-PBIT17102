@@ -25,6 +25,12 @@ class BMovieController extends Controller
         $movie->director=$request->director;
         $movie->main_character=$request->main_character;
         $movie->price=$request->price;
+        if($request->file('movie_img')){
+            $file=$request->file('movie_img');
+            $filename=date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('public/image'),$filename);
+            $movie['movie_img']=$filename;
+        }
         $movie->save();
         return redirect()->route('admin.movie.index')->with('Add new movie Successfully');
     }
@@ -42,6 +48,12 @@ class BMovieController extends Controller
         $movie->director=$request->director;
         $movie->main_character=$request->main_character;
         $movie->price=$request->price;
+        if($request->file('movie_img')){
+            $file=$request->file('movie_img');
+            $filename=date('YmdHi').$file->getClientOriginalName();
+            $file->move(public_path('public/image'),$filename);
+            $movie['movie_img']=$filename;
+        }
         $movie->save();
         return redirect()->route('admin.movie.index');
     }

@@ -8,6 +8,7 @@
               <thead>
                 <tr>
                   <th scope="col">&nbsp;</th>
+                  <th scope="col">IMAGE</th>
                   <th scope="col">MOVIE NAME</th>
                   <th scope="col">RELEASE DATE</th>
                   <th scope="col">PRICE</th>
@@ -18,7 +19,10 @@
               @foreach ($movie as $key=>$value)
               <tbody>
                 <tr>
-                  <th scope="col">&nbsp;</th> 
+                  <th scope="col">&nbsp;</th>
+                  <td>
+                    <img src="{{ url('public/image/'.$value->movie_img) }}" style="height: 200px; width: 150px">
+                  </td>
                   <td class="tm-product-name">{{ $value->movie_name }}</td>
                   <td>{{ $value->release_date }}</td>
                   <td>{{ $value->price }}</td>
