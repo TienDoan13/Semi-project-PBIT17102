@@ -65,3 +65,4 @@ Route::group(['prefix'=>'signin'], function(){
 Route::group(['prefix'=>'signup'], function(){
     Route::get('/',[SignupController::class,'signup'])->name('client.page.indexsignup');
 });
+

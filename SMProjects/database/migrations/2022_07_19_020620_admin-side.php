@@ -22,10 +22,10 @@ class AdminSide extends Migration
         Schema::create('movie', function($table){
             $table->increments('movie_id');
             $table->string('movie_name',200);
-            $table->string('description',3000);
+            $table->string('movie_description',3000);
             $table->string('release_date',200);
             $table->string('director',200);
-            $table->string('main_charactor',200);
+            $table->string('main_character',200);
             $table->string('price',200);
             $table->string('movie_img',2000);
             $table->string('movie_trailer',2000);
