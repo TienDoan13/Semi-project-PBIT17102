@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Scheme;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\BCategoryController;
 use App\Http\Controllers\BMovieController;
+use App\Http\Controllers\BUsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,4 +44,9 @@ Route::group(['prefix'=>'movie'], function(){
     Route::get('edit/{id}',[BMovieController::class,'getEditMovie']);
     Route::post('edit/{id}',[BMovieController::class,'postEditMovie'])->name('admin.movie.edit');
     Route::get('delete/{id}',[BMovieController::class,'deleteMovie']);
+});
+
+Route::group(['prefix'=>'users'], function(){
+    Route::get('/',[BUsersController::class,'Usersindex'])->name('admin.users.index');
+    Route::get('delete/{id}',[BUsersController::class,'deleteUsers']);
 });

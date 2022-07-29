@@ -11,5 +11,5 @@ class Movie extends Model
     protected $table='movie';
     public $primaryKey='movie_id';
     public $timestamps=false;
-    protected $filltable=['movie_name','movie_description','release_date','director','main_character','price','movie_img'];
+    protected $filltable=['movie_name','movie_description','release_date','director','main_character','price','movie_img','movie_trailer'];
 }

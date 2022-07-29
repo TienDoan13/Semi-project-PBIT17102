@@ -15,7 +15,8 @@
                     <form action="{{ route('admin.movie.add') }}" method="POST" role="form" enctype="multipart/form-data">
                         @csrf
                         <fieldset>
-                            <div>                              
+                            <div>
+                                @csrf                
                                 <label>Name:</label>
                                 <input type="text" class="form-control" name="movie_name"
                                         placeholder="Movie Name">
@@ -43,6 +44,8 @@
                                 <label>Image:</label>
                                 <input type="file" class="form-control" name="movie_img">
                                 <br>
+                                <label>Trailer:</label>
+                                <input type="file" class="form-control" name="movie_trailer">
                             </div>
                         </fieldset>
                         <button class="btn btn-primary btn-block text-uppercase mb-3" type="submit">
