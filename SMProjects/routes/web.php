@@ -8,6 +8,9 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\BCategoryController;
 use App\Http\Controllers\BMovieController;
 use App\Http\Controllers\BUsersController;
+use App\Http\Controllers\HomepageController;
+use App\Http\Controllers\SigninController;
+use App\Http\Controllers\SignupController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +53,16 @@ Route::group(['prefix'=>'users'], function(){
     Route::get('/',[BUsersController::class,'Usersindex'])->name('admin.users.index');
     Route::get('delete/{id}',[BUsersController::class,'deleteUsers']);
 });
+
+Route::group(['prefix'=>'homepage'], function(){
+    Route::get('/',[HomepageController::class,'homepage'])->name('client.page.index');
+});
+
+Route::group(['prefix'=>'signin'], function(){
+    Route::get('/',[SigninController::class,'signin'])->name('client.page.indexsignin');
+});
+
+Route::group(['prefix'=>'signup'], function(){
+    Route::get('/',[SignupController::class,'signup'])->name('client.page.indexsignup');
+});
+
