@@ -16,8 +16,7 @@
             <li><a href="tvshows.html">TV Shows</a></li>
             <li><a href="movies.html">Movies</a></li>
             <li><a href="new.html">New</a></li>
-            <li><a href="{{ route('client.page.indexsignin') }}" target="_blank">Sign In</a></li>
-            <li><a href="">Cart</a></li>
+            <li><a href="{{ route('client.page.signin') }}" target="_blank">Sign In</a></li>
         </ul>
         <div class="search">
             <input type="text" placeholder="Search">

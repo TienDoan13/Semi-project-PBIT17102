@@ -4,12 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Signup;
+use Illuminate\Support\Facades\Hash;
+use App\Models\User;
 
 class SignupController extends Controller
 {
-    public function signup(){
-        return view('client.page.indexsignup');
+    public function getSignup(){
+        return view('client.page.signup');
     }
 
     public function postSignup(Request $request)

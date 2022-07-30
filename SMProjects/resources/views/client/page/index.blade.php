@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="movie-list-container">
-            <h1 class="movie-list-title">New Releases</h1>
+            <h1 class="movie-list-title">Action</h1>
             <div class="movie-list-wrapper">
                 <div class="movie-list">
                     <div class="movie-list-item">

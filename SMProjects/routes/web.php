@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Scheme;
 use App\Http\Controllers\BackendController;
 use App\Http\Controllers\BCategoryController;
 use App\Http\Controllers\BMovieController;
-use App\Http\Controllers\BUsersController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\SignupController;
@@ -48,21 +47,16 @@ Route::group(['prefix'=>'movie'], function(){
     Route::post('edit/{id}',[BMovieController::class,'postEditMovie'])->name('admin.movie.edit');
     Route::get('delete/{id}',[BMovieController::class,'deleteMovie']);
 });
-
-Route::group(['prefix'=>'users'], function(){
-    Route::get('/',[BUsersController::class,'Usersindex'])->name('admin.users.index');
-    Route::get('delete/{id}',[BUsersController::class,'deleteUsers']);
-});
-
 Route::group(['prefix'=>'homepage'], function(){
     Route::get('/',[HomepageController::class,'homepage'])->name('client.page.index');
 });
 
 Route::group(['prefix'=>'signin'], function(){
-    Route::get('/',[SigninController::class,'signin'])->name('client.page.indexsignin');
+    Route::get('/',[SigninController::class,'getSignin'])->name('client.page.signin');
+    Route::post('/',[SigninController::class,'postSignin']);
 });
 
 Route::group(['prefix'=>'signup'], function(){
-    Route::get('/',[SignupController::class,'signup'])->name('client.page.indexsignup');
+    Route::get('/',[SignupController::class,'getSignup'])->name('client.page.signup');
+    Route::post('/',[SignupController::class,'postSignup']);
 });
-
