@@ -10,7 +10,7 @@ use App\Models\User;
 class SigninController extends Controller
 {
     public function getSignin(){
-        return view('client.page.signin');
+        return view('client.page.indexsignin');
     }
 
     public function postSignin(Request $request)
