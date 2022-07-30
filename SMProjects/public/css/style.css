@@ -113,6 +113,7 @@ header .logo img{
     align-items: center;
 }
 .content{
+    top: 40px;
     position: relative;
     z-index: 1;
     max-width: 550px;
@@ -170,7 +171,7 @@ header .logo img{
 }
 .play{
     position: absolute;
-    bottom: 280px;
+    bottom: 150px;
     left: 50px;
     display: inline-flex;
     justify-content: flex-start;
@@ -278,26 +279,6 @@ header .logo img{
 }
 .movie-list-item-button{
     position: relative;
-    display: inline-block;
-    margin-right: 10px;
-    background: #de0611;
-    color: #fff;
-    padding: 6px 20px;
-    text-decoration: none;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    bottom: 80px;
-    left: 40px;
-    outline: none;
-    border: none;
-    opacity: 0;
-    transition: 1s all ease-in-out;
-}
-.movie-list-item-button2{
-    position: relative;
-    display: inline-block;
-    margin-right: 10px;
     background: #de0611;
     color: #fff;
     padding: 5px 20px;
@@ -308,16 +289,17 @@ header .logo img{
     border: none;
     outline: none;
     bottom: 80px;
-    left: 35px;
+    right: 556px;
     opacity: 0;
     transition: 1s all ease-in-out;
 }
-.movie-list-item-button2{
+.movie-list-item-button{
     background: rgba(0,0,0,0.5);
     border: 1px solid rgba(255,255,2555,0.1);
 }
-.movie-list-item-button2:hover{
+.movie-list-item-button:hover{
     background: #de0611;
+    cursor: pointer;
 }
 .container{
     background-color: #151515;
