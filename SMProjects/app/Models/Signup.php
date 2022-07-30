@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Signup extends Model
 {
     use HasFactory;
+    protected $table='users';
+    public $primaryKey='id';
+    public $timestamps=false;
+    protected $filltable=['name','email',];
 }
