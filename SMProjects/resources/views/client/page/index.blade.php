@@ -3,12 +3,12 @@
 <div class="banner" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/breakingbad.png');">
     <div class="content">
         <h4>
-            <span>2009</span>
-            <span><i>18+</i></span>
-            <span>5 Seasons</span>
-            <span>Crimes TV Shows, TV Dramas</span>
+            <span>movie_year</span>
+            <span><i>giới hạn đỗ tuổi(không cần lắm)</i></span>
+            <span>cái này không viết(độ dài phim chẳng hạn)</span>
+            <span>thể loại(cái này tôi vẫn chưa biết nnoosi với model category thế nào)</span>
         </h4>
-        <p>Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+        <p>Movie_description</p>
         <div class="buttons">
             <a href=""><i class="fa-solid fa-money-bill"></i> Buy</a>
             <a href=""><i class="fa-solid fa-cart-shopping"></i> Cart</a>

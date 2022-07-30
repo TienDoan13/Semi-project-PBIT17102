@@ -22,6 +22,6 @@ class SignupController extends Controller
         $user->password = Hash::make($request->password);
         $user->remember_token = Str::random(10);
         $user->save();
-        return redirect()->route("client.page.signin");
+        return redirect()->route('client.page.signin')->with('Succesfully', 'Signup Succesfully');
     }
 }

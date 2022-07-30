@@ -17,14 +17,14 @@ class SigninController extends Controller
     {
         $arr = ['name'=>$request->name, 'password'=>$request->password];
         if(Auth::attempt($arr)){
-            return dd('Succesfully');
-            return redirect()->route('client.page.index');
+            dd('Succesfully');
         } else{
             dd('Failed');
         }
+        return redirect()->route('client.page.index');
     }
     public function getSignout(){
         Auth::signout();
-        return redirect()->intended('client.page.indexsignin');
+        return redirect()->intended('client.page.signin');
     }
 }
