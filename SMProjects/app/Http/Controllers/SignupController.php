@@ -10,7 +10,7 @@ use App\Models\User;
 class SignupController extends Controller
 {
     public function getSignup(){
-        return view('client.page.indexsignup');
+        return view('client.page.signup');
     }
 
     public function postSignup(Request $request)
