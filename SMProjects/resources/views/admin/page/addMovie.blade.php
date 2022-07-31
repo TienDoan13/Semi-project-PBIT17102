@@ -43,9 +43,6 @@
                                 <br>
                                 <label>Image:</label>
                                 <input type="file" class="form-control" name="movie_img">
-                                <br>
-                                <label>Trailer:</label>
-                                <input type="file" class="form-control" name="movie_trailer">
                             </div>
                         </fieldset>
                         <button class="btn btn-primary btn-block text-uppercase mb-3" type="submit">

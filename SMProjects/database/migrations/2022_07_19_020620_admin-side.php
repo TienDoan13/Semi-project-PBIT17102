@@ -28,7 +28,6 @@ class AdminSide extends Migration
             $table->string('main_character',200);
             $table->string('price',200);
             $table->string('movie_img',2000);
-            $table->string('movie_trailer',2000);
         });
         
         Schema::create('movie_category', function($table){
