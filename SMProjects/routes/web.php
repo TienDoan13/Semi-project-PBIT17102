@@ -11,6 +11,9 @@ use App\Http\Controllers\BUsersController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\SignupController;
+use App\Http\Controllers\TvshowsController;
+use App\Http\Controllers\NewController;
+use App\Http\Controllers\MoviesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,4 +69,13 @@ Route::group(['prefix'=>'signin'], function(){
 Route::group(['prefix'=>'signup'], function(){
     Route::get('/',[SignupController::class,'getSignup'])->name('client.page.signup');
     Route::post('/',[SignupController::class,'postSignup']);
+});
+Route::group(['prefix'=>'tvshows'], function(){
+    Route::get('/',[TvshowsController::class,'tvshows'])->name('client.page.tvshows');
+});
+Route::group(['prefix'=>'movies'], function(){
+    Route::get('/',[MoviesController::class,'movies'])->name('client.page.movies');
+});
+Route::group(['prefix'=>'new'], function(){
+    Route::get('/',[NewController::class,'new'])->name('client.page.new');
 });

@@ -34,12 +34,14 @@
             <h1 class="movie-list-title">New Releases</h1>
             <div class="movie-list-wrapper">
                 <div class="movie-list">
+                    @foreach ($homepage as $key => $value)
                     <div class="movie-list-item">
-                        <img class="movie-list-item-img" src="img/breakingbad.png" alt="">
-                        <span class="movie-list-item-title">Breaking Bad</span>
-                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <img class="movie-list-item-img" src="{{ url('public/image/'.$value->movie_img)}}">
+                        <span class="movie-list-item-title">{{$value->movie_name}}</span>
+                        <p class="movie-list-item-decs">{{$value->movie_description}}</p>
                         <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
                     </div>
+                    @endforeach
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </div>

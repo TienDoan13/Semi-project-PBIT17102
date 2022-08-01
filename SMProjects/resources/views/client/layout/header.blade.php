@@ -13,9 +13,9 @@
         <a href="" class="logo"><img src="img/logo.png"></a>
         <ul class="navigation">
             <li><a href="{{ route('client.page.index') }}">Home</a></li>
-            <li><a href="tvshows.html">TV Shows</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="new.html">New</a></li>
+            <li><a href="{{ route('client.page.tvshows') }}">TV Shows</a></li>
+            <li><a href="{{ route('client.page.movies') }}">Movies</a></li>
+            <li><a href="{{ route('client.page.new') }}">New</a></li>
             <li><a href="{{ route('client.page.signin') }}" target="_blank">Sign In</a></li>
         </ul>
         <div class="search">
