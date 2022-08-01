@@ -12,8 +12,4 @@ class HomepageController extends Controller
         $homepage=Homepage::all();
         return view('client.page.index', compact('homepage'));
     }
-    public function tvshows(){
-        $homepage=Homepage::all();
-        return view('client.page.tvshows');
-    }
 }

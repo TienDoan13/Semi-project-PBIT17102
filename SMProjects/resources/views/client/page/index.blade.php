@@ -2,6 +2,7 @@
 @section('content')
 <div class="banner" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/breakingbad.png');">
     <div class="content">
+        <h1>Breaking Bad</h1>
         <h4>
             <span>2009</span>
             <span><i>18+</i></span>
@@ -13,21 +14,7 @@
             <a href=""><i class="fa-solid fa-cart-shopping"></i> Buy</a>
         </div>
     </div>
-    <a class="play" onclick="toggleVideo();"><img src="img/play.png"> Watch Trailer</a>
 </div>
-<div class="trailer">
-    <video src="video/trailer.mp4" controls="true" autoplay="true"></video>
-    <img src="img/close.png" class="close" onclick="toggleVideo();">
-</div>
-<script>
-    function toggleVideo(){
-        const trailer = document.querySelector('.trailer');
-        const video = document.querySelector('video');
-        trailer.classList.toggle('active')
-        video.currentTime = 0;
-        video.pause(close);
-    }
-</script>
 <div class="container">
     <div class="content-container">
         <div class="movie-list-container">
@@ -56,6 +43,30 @@
                         <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
                         <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
                     </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/thor.png" alt="">
+                        <span class="movie-list-item-title">Thor</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/green.png" alt="">
+                        <span class="movie-list-item-title">Green Lantern</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/brave.png" alt="">
+                        <span class="movie-list-item-title">Brave</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/taylor.png" alt="">
+                        <span class="movie-list-item-title"></span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
                 </div>
                 <i class="fa-solid fa-chevron-right arrow"></i>
             </div>
@@ -65,7 +76,31 @@
             <div class="movie-list-wrapper">
                 <div class="movie-list">
                     <div class="movie-list-item">
-                        <img class="movie-list-item-img" src="img/breakingbad.png" alt="">
+                        <img class="movie-list-item-img" src="img/pale.png" alt="">
+                        <span class="movie-list-item-title">Pale Rider</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/300.png" alt="">
+                        <span class="movie-list-item-title">300: Rise Of An Empire</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/starwar.png" alt="">
+                        <span class="movie-list-item-title">Star War</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/london.png" alt="">
+                        <span class="movie-list-item-title">London Has Fallen</span>
+                        <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
+                        <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
+                    </div>
+                    <div class="movie-list-item">
+                        <img class="movie-list-item-img" src="img/taylor.png" alt="">
                         <span class="movie-list-item-title">Breaking Bad</span>
                         <p class="movie-list-item-decs">Diagnosed with terminal lung cancer, a high school chemistry teacher resorts to cooking and selling methamphetamine to provide for his family.</p>
                         <button class="movie-list-item-button"><i class="fa-solid fa-cart-shopping"></i> Buy</button>
