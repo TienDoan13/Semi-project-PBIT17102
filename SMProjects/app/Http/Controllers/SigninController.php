@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use App\Models\User;
+use App\Models\Homepage;
 
 class SigninController extends Controller
 {
@@ -31,7 +32,8 @@ class SigninController extends Controller
             $remember=$request->remember;
             if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
                 if(Auth::user()->role==2){
-                    return view('client.page.index');
+                    $homepage=Homepage::all();
+                    return view('client.page.index',compact('homepage'));
                 }
                 else{
                     return view('admin.page.index');
