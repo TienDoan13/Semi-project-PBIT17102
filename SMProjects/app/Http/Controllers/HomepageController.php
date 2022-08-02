@@ -9,6 +9,7 @@ use Illuminate\Http\Request;
 class HomepageController extends Controller
 {
     public function homepage(){
-        return view('client.page.index');
+        $homepage=Homepage::all();
+        return view('client.page.index', compact('homepage'));
     }
 }
