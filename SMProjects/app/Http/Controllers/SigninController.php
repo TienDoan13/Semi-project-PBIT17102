@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Validator;
 use App\Models\User;
 
 class SigninController extends Controller
@@ -15,16 +16,27 @@ class SigninController extends Controller
 
     public function postSignin(Request $request)
     {
-        $arr = ['name'=>$request->name, 'password'=>$request->password];
-        if(Auth::attempt($arr)){
-            dd('Succesfully');
-        } else{
-            dd('Failed');
+        if($request->isMethod('POST')){
+            $validator=validator::make($request->all(),[
+                'email'=>'required|email|max:100',
+                'password'=>'required',
+            ]);
+
+            if($validator->fails()){
+                return redirect()->back()
+                ->withErrors($validator)
+                ->withInput();
+            }
+
+            $remember=$request->remember;
+            if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
+                if(Auth::user()->role==2){
+                    return view('client.page.index');
+                }
+                else{
+                    return view('admin.page.index');
+                }
+            }
         }
-        return redirect()->route('client.page.index');
-    }
-    public function getSignout(){
-        Auth::signout();
-        return redirect()->intended('client.page.signin');
     }
 }

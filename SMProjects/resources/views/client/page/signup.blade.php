@@ -8,17 +8,39 @@
                 <h2>Sign Up</h2>
                 <form role="form" method="POST" action="">
                     @csrf
-                    <div class="inputBx">
-                        <span>Username</span>
+                    <div class="inputBx form-group">
+                        <span>Email</span>
+                        <input type="text" name="email">
+                    </div>
+                    @if ($errors->has('email'))
+                    {{ $errors->first('email') }}
+                    @endif
+                    <div class="inputBx form-group">
+                        <span>Name</span>
                         <input type="text" name="name">
                     </div>
-                    <div class="inputBx">
+                    @if ($errors->has('name'))
+                    {{ $errors->first('name') }}
+                    @endif
+                    <div class="inputBx form-group">
                         <span>Password</span>
                         <input type="password" name="password">
                     </div>
-                    <div class="inputBx">
-                        <span>Email</span>
-                        <input type="text" name="email">
+                    @if ($errors->has('password'))
+                    {{ $errors->first('password') }}
+                    @endif
+                    <div class="inputBx form-group">
+                        <span>Confirm Password</span>
+                        <input type="password" name="password_confirmation">
+                    </div>
+                    <div class="inputBx form-group">
+                        <span>Role</span>
+                        <br>
+                        <select class="inputBx form-group" name="role">
+                            <option class="hidden" selected disabled>Select your role</option>
+                            <option value="1">Admin</option>
+                            <option value="2">Customer</option>
+                        </select>
                     </div>
                     <div class="remember">
                         <label><input type="checkbox"> &nbsp;&nbsp;&nbsp;I agree with <a href="">Terms & Privacy</a></label>

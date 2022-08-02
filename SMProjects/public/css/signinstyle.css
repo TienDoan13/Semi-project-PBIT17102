@@ -55,6 +55,9 @@ section .contentBx .formBx h2{
     display: inline-block;
     letter-spacing: 1px;
 }
+section .contentBx .formBx h6{
+    color: white;
+}
 section .contentBx .formBx .inputBx{
     margin-bottom: 20px;
 }

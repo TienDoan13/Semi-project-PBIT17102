@@ -6,20 +6,31 @@
         <div class="contentBx">
             <div class="formBx">
                 <h2>Sign In</h2>
-                <form role="form" method="GET" action="">
+                @if ($message=Session::get('success'))
+                <div class="alert alert-success">
+                  <h6>{{ $message }}</h6>
+                </div>
+                @endif          
+                <form role="form" method="POST" action="">
                     @csrf
-                    <div class="inputBx">
-                        <span>Username</span>
-                        <input type="text" name="name">
+                    <div class="inputBx form-group">
+                        <span>Email</span>
+                        <input type="text" name="email">
                     </div>
-                    <div class="inputBx">
+                    @if ($errors->has('email'))
+                    <h6>{{ $errors->first('email') }}</h6>
+                    @endif
+                    <div class="inputBx form-group">
                         <span>Password</span>
                         <input type="password" name="password">
                     </div>
-                    <div class="remember">
-                        <label><input type="checkbox"> &nbsp;&nbsp;&nbsp;Remember Me</label>
+                    @if ($errors->has('password'))
+                    <h6>{{ $errors->first('password') }}</h6>
+                    @endif
+                    <div class="remember form-group">
+                        <label><input type="checkbox" name="remember"> &nbsp;&nbsp;&nbsp;Remember Me</label>
                     </div>
-                    <div class="inputBx">
+                    <div class="inputBx form-group">
                         <input type="submit" value="Sign In">
                     </div>
                     <div class="inputBx">
