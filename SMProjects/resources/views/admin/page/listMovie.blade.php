@@ -4,6 +4,14 @@
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
         <div class="tm-bg-primary-dark tm-block tm-block-products">
           <div class="tm-product-table-container">
+
+            @if ($message=Session::get('success'))
+              <div class="alert alert-success">
+                <p>{{ $message }}</p>
+              </div>
+            @endif
+
+            <a href="{{ route('admin.movie.add') }}" class="btn btn-primary btn-block text-uppercase">Add new movie</a>
             <table class="table table-hover tm-table-small tm-product-table">
               <thead>
                 <tr>
@@ -16,6 +24,7 @@
                   <th scope="col">&nbsp;</th>
                 </tr>
               </thead>
+              
               @foreach ($movie as $key=>$value)
               <tbody>
                 <tr>
@@ -37,7 +46,6 @@
               @endforeach
             </table>
             <!-- table container -->
-            <a href="{{ route('admin.movie.add') }}" class="btn btn-primary btn-block text-uppercase mb-3">Add new movie</a>
           </div>
         </div>
       </div>
