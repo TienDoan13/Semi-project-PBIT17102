@@ -11,6 +11,7 @@ use App\Http\Controllers\BUsersController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\SignupController;
+use App\Http\Controllers\LogoutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -68,4 +69,8 @@ Route::group(['prefix'=>'signin'], function(){
 Route::group(['prefix'=>'signup'], function(){
     Route::get('/',[SignupController::class,'getSignup'])->name('client.page.signup');
     Route::post('/',[SignupController::class,'postSignup']);
+});
+
+Route::group(['prefix'=>'logout'], function(){
+    Route::get('/',[LogoutController::class,'Logout'])->name('both.page.logout');
 });
