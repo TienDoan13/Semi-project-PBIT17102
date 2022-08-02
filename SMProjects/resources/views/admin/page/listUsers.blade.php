@@ -1,5 +1,12 @@
 @extends('admin.layout.master')
 @section('content')
+
+    @if ($message=Session::get('success'))
+      <div class="alert alert-success">
+        <p>{{ $message }}</p>
+      </div>
+    @endif
+
     <div class="row tm-content-row">
       <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
         <div class="tm-bg-primary-dark tm-block tm-block-products">
@@ -11,6 +18,7 @@
                   <th scope="col">NAME</th>
                   <th scope="col">CREAETED</th>
                   <th scope='col'>EMAIL</th>
+                  <th scope="col">OPTION</th>
                   <th scope="col">&nbsp;</th>
                 </tr>
               </thead>

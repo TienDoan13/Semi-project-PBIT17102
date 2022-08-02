@@ -8,6 +8,18 @@
       </div>
     </div><!--/.row-->
     
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <strong>Whoops!</strong> There were some problems with your input!
+        <br>
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+
     <div class="row">
         <div class="col-xs-12 col-md-5 col-lg-5">
             <div class="panel panel-primary">
@@ -43,6 +55,12 @@
                                 <label>Image:</label>
                                 <input type="file" class="form-control" name="movie_img">
                                 <br>
+                                <label>Category:</label>
+                                <select name="category_id" class="form-control">
+                                    @foreach ($categories as $category)
+                                        <option value="{{ $category->category_id }}">{{ $category->category_name }}</option>
+                                    @endforeach
+                                </select>
                                 <br>
                             </div>
                         </fieldset>

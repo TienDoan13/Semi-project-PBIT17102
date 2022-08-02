@@ -51,6 +51,8 @@ Route::group(['prefix'=>'movie'], function(){
 
 Route::group(['prefix'=>'users'], function(){
     Route::get('/',[BUsersController::class,'Usersindex'])->name('admin.users.index');
+    Route::get('edit/{id}',[BUsersController::class,'getEditUsers'])->name('admin.users.edit');
+    Route::post('edit/{id}',[BusersController::class,'postEditUsers']);
     Route::get('delete/{id}',[BUsersController::class,'deleteUsers']);
 });
 

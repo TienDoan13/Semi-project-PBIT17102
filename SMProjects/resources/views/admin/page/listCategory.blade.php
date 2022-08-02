@@ -6,7 +6,13 @@
       <h1 class="page-header">Category List</h1>
     </div>
   </div><!--/.row-->
-  
+
+  @if ($message=Session::get('success'))
+  <div class="alert alert-success">
+    <p>{{ $message }}</p>
+  </div>
+  @endif
+
   <div class="row">
     <div class="col-xs-12 col-md-5 col-lg-5">
         <div class="panel panel-primary">
@@ -15,11 +21,12 @@
               <label>Category:</label>
                 <input type="text" name="name" class="form-control" placeholder="Search">
                 <br>
-                <a href="{{ route('admin.category.add') }}" class="btn btn-warning"><span class="glyphicon glyphicon-trash"></span>Add Category</a>
+                <a href="{{ route('admin.category.add') }}" class="btn btn-warning"><span class="glyphicon glyphicon-trash"></span>Add New Category</a>
             </div>
           </div>
         </div>
     </div>
+    
     <div class="col-xs-12 col-md-7 col-lg-7">
       <div class="panel panel-primary">
         <div class="panel-heading">List:</div>

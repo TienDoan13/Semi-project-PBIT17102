@@ -28,13 +28,7 @@ class AdminSide extends Migration
             $table->string('main_character',200);
             $table->string('price',200);
             $table->string('movie_img',2000);
-        });
-        
-        Schema::create('movie_category', function($table){
-            $table->increments('movie_category_id');
-            $table->integer('movie_id')->unsigned();
             $table->integer('category_id')->unsigned();
-            $table->foreign('movie_id')->references('movie_id')->on('movie');
             $table->foreign('category_id')->references('category_id')->on('category');
         });
         
