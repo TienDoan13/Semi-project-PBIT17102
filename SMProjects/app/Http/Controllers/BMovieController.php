@@ -29,7 +29,7 @@ class BMovieController extends Controller
                 'director'=>'required',
                 'main_character'=>'required',
                 'price'=>'required',
-                'movie_img'=>'required|image|mimes:jpg,png,jpeg|max:1000',
+                'movie_img'=>'required|image|mimes:jpg,png,jpeg|max:5000',
             ]);
 
             if($validator->fails()){
