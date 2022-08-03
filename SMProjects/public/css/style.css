@@ -126,6 +126,9 @@ header .logo img{
     color: white;
     font-weight: 500;
 }
+h3{
+    color:aquamarine;
+}
 .banner .content h4 span{
     padding: 0 10px;
     border-right: 1px solid rgba(255,255,2555,0.5);

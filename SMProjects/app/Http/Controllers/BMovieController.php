@@ -56,7 +56,7 @@ class BMovieController extends Controller
                 $filename='noname.jpg';
             }
             $movie->save();
-            return redirect()->route('admin.movie.index')->with('success','Add new Movie Successfully');
+            return redirect()->route('admin.movie.index')->with('success','Add new Movie Successfully!');
         }
     }
 
@@ -102,7 +102,7 @@ class BMovieController extends Controller
                 $filename='noname.jpg';
             }
             $movie->save();
-            return redirect()->route('admin.movie.index')->with('success','Edit the Movie Successfully');
+            return redirect()->route('admin.movie.index')->with('success','Edit the Movie Successfully!');
         }
     }
 
