@@ -25,8 +25,11 @@
                 <!-- Begin Page Content -->
                     @yield('content')            
                 <!-- /.container-fluid -->
+            </div>
+            
+            <div>
                 <!-- Footer -->
-                    @include('admin.layout.footer')
+                @include('admin.layout.footer')
                 <!-- End of Footer -->
             </div>
         </div>

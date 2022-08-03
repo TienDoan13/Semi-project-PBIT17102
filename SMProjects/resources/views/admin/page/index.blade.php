@@ -1,5 +1,12 @@
 @extends('admin.layout.master')
 @section('content')
+
+@if ($message=Session::get('login'))
+<div class="alert alert-success">
+  <p>{{ $message }}</p>
+</div>
+@endif
+
 <div class="container-fluid">
     <div class="row">
         <div class="col-xl-3 col-md-6 mb-4">

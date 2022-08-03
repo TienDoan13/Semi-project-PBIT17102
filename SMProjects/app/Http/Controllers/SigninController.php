@@ -3,11 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\File;
 use App\Models\User;
-use App\Models\Homepage;
+use Illuminate\Http\Request;
 
 class SigninController extends Controller
 {
@@ -32,11 +32,10 @@ class SigninController extends Controller
             $remember=$request->remember;
             if(Auth::attempt(['email'=>$request->email,'password'=>$request->password])){
                 if(Auth::user()->role==2){
-                    $homepage=Homepage::all();
-                    return view('client.page.index',compact('homepage'));
+                    return redirect()->route('client.page.index')->with('login','Login Successfully');
                 }
                 else{
-                    return view('admin.page.index');
+                    return redirect()->route('admin.all.index')->with('login','Login as Admin Successfully!');
                 }
             }
         }

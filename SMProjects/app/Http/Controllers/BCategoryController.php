@@ -35,7 +35,7 @@ class BCategoryController extends Controller
             $category->category_name=$request->category_name;
             $category->category_description=$request->category_description;
             $category->save();
-            return redirect()->route('admin.category.index')->with('success','Add new Category Successfully');
+            return redirect()->route('admin.category.index')->with('success','Add new Category Successfully!');
         }
     }
 
@@ -61,7 +61,7 @@ class BCategoryController extends Controller
             $category->category_name=$request->category_name;
             $category->category_description=$request->category_description;
             $category->save();
-            return redirect()->route('admin.category.index')->with('success','Edit the Category Successfully');
+            return redirect()->route('admin.category.index')->with('success','Edit the Category Successfully!');
         }
     }
 

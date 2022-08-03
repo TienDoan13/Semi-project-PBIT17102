@@ -37,7 +37,7 @@ class BUsersController extends Controller
             $users=User::find($id);
             $users->password=Hash::make($request->password);
             $users->save();
-            return redirect()->route('admin.users.index')->with('success','Edit password Successfully');
+            return redirect()->route('admin.users.index')->with('success','Edit password Successfully!');
         }
     }
 

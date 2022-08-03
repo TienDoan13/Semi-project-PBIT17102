@@ -1,5 +1,6 @@
 @extends('client.layout.master')
 @section('content')
+
 <div class="banner" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('img/breakingbad.png');">
     <div class="content">
         <h1>Breaking Bad</h1>
@@ -18,6 +19,12 @@
 <div class="container">
     <div class="content-container">
         <div class="movie-list-container">
+            @if ($message=Session::get('login'))
+            <div class="alert alert-success">
+                <h3>{{ $message }}</h3>
+                <br>
+            </div>
+            @endif
             <h1 class="movie-list-title">New Releases</h1>
             <div class="movie-list-wrapper">
                 <div class="movie-list">
