@@ -38,6 +38,9 @@ class SigninController extends Controller
                     return redirect()->route('admin.all.index')->with('login','Login as Admin Successfully!');
                 }
             }
+            else{
+                return redirect()->route('client.page.signin')->with('fail','Login Failed!');
+            }
         }
     }
 }

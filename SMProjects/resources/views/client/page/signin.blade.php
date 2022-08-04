@@ -12,8 +12,15 @@
                   <h6>{{ $message }}</h6>
                   <br>
                 </div>
+                @endif
+                
+                @if ($message=Session::get('fail'))
+                <div>
+                  <h6 style="color: #de0611">{{ $message }}</h6>
+                  <br>
+                </div>
+                @endif     
 
-                @endif          
                 <form role="form" method="POST" action="">
                     @csrf
                     <div class="inputBx form-group">
