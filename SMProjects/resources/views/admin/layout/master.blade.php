@@ -11,23 +11,20 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-            @include('admin.layout.sidebar')
+        @include('admin.layout.sidebar')
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
-                <!-- Topbar -->
-                    @include('admin.layout.topbar')
-                <!-- End of Topbar -->
+            <!-- Topbar -->
+            @include('admin.layout.topbar')
+            <!-- End of Topbar -->
             <div>
                 <!-- Begin Page Content -->
-                    @yield('content')            
+                @yield('content')
                 <!-- /.container-fluid -->
-            </div>
-            
-            <div>
                 <!-- Footer -->
                 @include('admin.layout.footer')
                 <!-- End of Footer -->
@@ -44,7 +41,8 @@
     </a>
 
     <!-- Logout Modal-->
-        @include('admin.layout.logout')
+    @include('admin.layout.logout')
 </body>
 @include('admin.layout.js')
+
 </html>
