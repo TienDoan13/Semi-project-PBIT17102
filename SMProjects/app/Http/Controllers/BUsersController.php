@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Usermanagement;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
@@ -13,12 +13,12 @@ use Illuminate\Http\Request;
 class BUsersController extends Controller
 {
     public function Usersindex(){
-        $user=User::all();
+        $user=Usermanagement::all();
         return view('admin.page.listUsers', compact('user'));
     }
 
     public function getEditUsers($id){
-        $data['users']=User::find($id);
+        $data['users']=Usermanagement::find($id);
         return view('admin.page.editUsers',$data);
     }
 
@@ -34,7 +34,7 @@ class BUsersController extends Controller
                 ->withInput();
             }
 
-            $users=User::find($id);
+            $users=Usermanagement::find($id);
             $users->password=Hash::make($request->password);
             $users->save();
             return redirect()->route('admin.users.index')->with('success','Edit password Successfully!');
@@ -42,7 +42,7 @@ class BUsersController extends Controller
     }
 
     public function deleteUsers($id){
-        $movie=User::find($id);
+        $movie=Usermanagement::find($id);
         $movie->delete();
         return back();
     }
