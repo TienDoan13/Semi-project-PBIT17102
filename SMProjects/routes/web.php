@@ -15,6 +15,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\TvshowsController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\BSearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,6 +52,7 @@ Route::group(['prefix'=>'movie'], function(){
     Route::get('edit/{id}',[BMovieController::class,'getEditMovie']);
     Route::post('edit/{id}',[BMovieController::class,'postEditMovie'])->name('admin.movie.edit');
     Route::get('delete/{id}',[BMovieController::class,'deleteMovie']);
+    Route::get('/search/',[BSearchController::class,'MOvieSearch'])->name('admin.movie.search');
 });
 
 Route::group(['prefix'=>'users'], function(){
