@@ -14,8 +14,5 @@ class BSearchController extends Controller
         $movie=Movie::query()->where('movie_name','LIKE','%'.$search.'%')->get();
         return view('admin.page.searchMovie',compact('movie'));
     }
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
+    
 }

@@ -8,6 +8,7 @@ use App\Http\Controllers\BackendController;
 use App\Http\Controllers\BCategoryController;
 use App\Http\Controllers\BMovieController;
 use App\Http\Controllers\BUsersController;
+use App\Http\Controllers\BSearchController;
 use App\Http\Controllers\HomepageController;
 use App\Http\Controllers\SigninController;
 use App\Http\Controllers\SignupController;
@@ -15,11 +16,7 @@ use App\Http\Controllers\LogoutController;
 use App\Http\Controllers\TvshowsController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\MoviesController;
-use App\Http\Controllers\BSearchController;
-<<<<<<< Updated upstream
-=======
 use App\Http\Controllers\SearchMovieController;
->>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -56,11 +53,7 @@ Route::group(['prefix'=>'movie'], function(){
     Route::get('edit/{id}',[BMovieController::class,'getEditMovie']);
     Route::post('edit/{id}',[BMovieController::class,'postEditMovie'])->name('admin.movie.edit');
     Route::get('delete/{id}',[BMovieController::class,'deleteMovie']);
-<<<<<<< Updated upstream
-    Route::get('/search/',[BSearchController::class,'MOvieSearch'])->name('admin.movie.search');
-=======
     Route::get('search',[BSearchController::class,'MovieSearch'])->name('admin.movie.search');
->>>>>>> Stashed changes
 });
 
 Route::group(['prefix'=>'users'], function(){
