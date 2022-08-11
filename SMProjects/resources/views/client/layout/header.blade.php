@@ -18,10 +18,15 @@
             <li><a href="{{ route('client.page.new') }}">New</a></li>
             <li><a href="{{ route('client.page.signin') }}" target="_blank">Sign In</a></li>
         </ul>
-        <div class="search">
-            <input type="text" placeholder="Search">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </div>
+        <form action="{{ route('client.page.SearchMovie') }}" method="GET">
+            <div class="search">
+                <input type="text" placeholder="Search" name="moviename">
+                <button type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </form>
+
         <div id="time">
             <div class="circle" style="--clr:#ff2972;">
                 <svg>

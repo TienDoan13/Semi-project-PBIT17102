@@ -16,6 +16,10 @@ use App\Http\Controllers\TvshowsController;
 use App\Http\Controllers\NewController;
 use App\Http\Controllers\MoviesController;
 use App\Http\Controllers\BSearchController;
+<<<<<<< Updated upstream
+=======
+use App\Http\Controllers\SearchMovieController;
+>>>>>>> Stashed changes
 
 /*
 |--------------------------------------------------------------------------
@@ -52,7 +56,11 @@ Route::group(['prefix'=>'movie'], function(){
     Route::get('edit/{id}',[BMovieController::class,'getEditMovie']);
     Route::post('edit/{id}',[BMovieController::class,'postEditMovie'])->name('admin.movie.edit');
     Route::get('delete/{id}',[BMovieController::class,'deleteMovie']);
+<<<<<<< Updated upstream
     Route::get('/search/',[BSearchController::class,'MOvieSearch'])->name('admin.movie.search');
+=======
+    Route::get('search',[BSearchController::class,'MovieSearch'])->name('admin.movie.search');
+>>>>>>> Stashed changes
 });
 
 Route::group(['prefix'=>'users'], function(){
@@ -64,6 +72,10 @@ Route::group(['prefix'=>'users'], function(){
 
 Route::group(['prefix'=>'homepage'], function(){
     Route::get('/',[HomepageController::class,'homepage'])->name('client.page.index');
+});
+
+Route::group(['prefix'=>'search'],function(){
+    Route::get('/',[SearchMovieController::class,'MovieSearchs'])->name('client.page.SearchMovie');
 });
 
 Route::group(['prefix'=>'signin'], function(){
