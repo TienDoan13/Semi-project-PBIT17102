@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Movie;
-use App\MOdels\Category;
+use App\Models\Category;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\File;
