@@ -30,7 +30,7 @@
                 <tr>
                   <th scope="col">&nbsp;</th>
                   <td>
-                    <img src="{{ url('public/image/'.$value->movie_img) }}" style="height: 200px; width: 150px">
+                    <img src="{{ url('public/image/'.$value->movie_img) }}" style="height: 180px; width: 140px">
                   </td>
                   <td class="tm-product-name">{{ $value->movie_name }}</td>
                   <td>{{ $value->release_date }}</td>
