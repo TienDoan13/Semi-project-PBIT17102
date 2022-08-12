@@ -29,9 +29,6 @@ use App\Http\Controllers\SearchMovieController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Route::group(['prefix'=>'index'], function(){
     Route::get('/',[BackendController::class,'index'])->name('admin.all.index');
@@ -63,7 +60,7 @@ Route::group(['prefix'=>'users'], function(){
     Route::get('delete/{id}',[BUsersController::class,'deleteUsers']);
 });
 
-Route::group(['prefix'=>'homepage'], function(){
+Route::group(['prefix'=>'/'], function(){
     Route::get('/',[HomepageController::class,'homepage'])->name('client.page.index');
 });
 
